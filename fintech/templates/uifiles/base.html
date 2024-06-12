@@ -33,7 +33,7 @@
 <header class="topnav two">
   <div class="container">
     <div class="header-bar">
-      <a href="index.html"><img src="assets/img/home/logo-m.png" alt="logo"></a>
+      <a href="index.html"><img src="{% static 'assets/img/home/logo-m.png' %}" alt="logo"></a>
         <nav class="navbar">
           <ul class="navbar-links">
             <li class="navbar-dropdown has-children">
@@ -88,7 +88,7 @@
                     <i></i>
                 </span>
             </div>
-            <a href="contact.html" class="btn">Contactus</a>
+            <a href="/contactus/" class="btn">Contactus</a>
         </div>
         
         <div class="bar-menu">
@@ -137,7 +137,7 @@
             </ul>
           </li>
           
-          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="/contactus/">Contact us</a></li>
 
         </ul>
 
@@ -203,16 +203,16 @@
 {% block content %} 
 
 {% endblock %}
-<footer class="gap no-bottom two" style="background-image: url(assets/img/footer-2.jpg);">
+<footer class="gap no-bottom two" style="background-image: url(../../static/assets/img/footer-2.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/img/home/logo-m.png" alt="log">
+                        <img src="{% static 'assets/img/home/logo-m.png' %}" alt="log">
                     </a>
                     <p>SFI Fintech is a revolutionary platform designed to be your one-stop solution for all your financial needs.</p>
-                    <img src="assets/img/imgs.png" alt="imgs">
+                    <img src="{% static 'assets/img/imgs.png' %}" alt="imgs">
                     <h6>60 Million User Use This App</h6>
                 </div>
             </div>
@@ -266,4 +266,5 @@
 <!-- fancybox -->
 <script src="{% static 'assets/js/jquery.fancybox.min.js' %}"></script>
 <script src="{% static 'assets/js/custom.js' %}"></script>
+<script src="{% static 'assets/js/contact.js' %}"></script>
 </body>

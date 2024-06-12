@@ -2816,6 +2816,7 @@ ol.breadcrumb li a{
 }
 .bannr-img:after {
     content: "";
+    display: none!important;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -4868,8 +4869,15 @@ ul.quick-links li a,ul.Meta li a,.blog.our-blog > a,.pricing-two,.location,.coun
     padding-bottom: 10px;
     font-weight: bold;
     
+    
 }
 label{
     display: inline-block;
     
+}
+.content-form select {
+    height:60px!important;
+    border-radius: 52px!important;
+    width: 100%;
+    overflow: hidden!important;
 }
