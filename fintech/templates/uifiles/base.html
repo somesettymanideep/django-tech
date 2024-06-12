@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -8,20 +9,20 @@
   <title>Sfi-fintech</title>
   <link rel="icon" href="assets/img/heading-img.png">
   <!-- CSS only -->
-   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-   <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+   <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
    <!-- fancybox -->
-   <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
-   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="{% static 'assets/css/jquery.fancybox.min.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
    <!-- style -->
-   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
    <!-- responsive -->
-   <link rel="stylesheet" href="assets/css/responsive.css">
+   <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
    <!-- color -->
-   <link rel="stylesheet" href="assets/css/color.css">
-   <script src="assets/js/jquery-3.6.0.min.js"></script>
-   <script src="assets/js/preloader.js"></script>
+   <link rel="stylesheet" href="{% static 'assets/css/color.css' %}">
+   <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+   <script src="{% static 'assets/js/preloader.js' %}"></script>
  </head>
 <body style="background-color: #000;">
 <!-- loader -->
@@ -199,7 +200,9 @@
                 </div>
             </div>
 </header>
+{% block content %} 
 
+{% endblock %}
 <footer class="gap no-bottom two" style="background-image: url(assets/img/footer-2.jpg);">
     <div class="container">
         <div class="row">
@@ -258,9 +261,9 @@
       <span id="progress-value"><i class="fa-solid fa-up-long"></i></span>
 </div>
 <!-- progress end -->
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
 <!-- fancybox -->
-<script src="assets/js/jquery.fancybox.min.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="{% static 'assets/js/jquery.fancybox.min.js' %}"></script>
+<script src="{% static 'assets/js/custom.js' %}"></script>
 </body>
