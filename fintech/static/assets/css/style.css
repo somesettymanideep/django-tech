@@ -2765,6 +2765,7 @@ ol.breadcrumb li a{
     font-weight: 800;
 }
 .breadcrumb-item.active {
+    display:none;
     color: #fff;
     font-weight: 800;
 }
@@ -4880,4 +4881,10 @@ label{
     border-radius: 52px!important;
     width: 100%;
     overflow: hidden!important;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    display: none;
+}
+.bannr:before {
+    display:none;
 }

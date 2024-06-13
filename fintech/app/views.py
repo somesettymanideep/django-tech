@@ -17,8 +17,9 @@ def contactus(request):
         company_name = request.POST.get('Company Name')
         business_type = request.POST.get('Business Type')
         years_in_business = request.POST.get('Years in Business')
-        company_insured = request.POST.get('Company Insured') == 'true'
-        company_licensed = request.POST.get('Company Licensed') == 'true'
+        company_insured = request.POST.get('Company Insured') == 'Yes'
+        company_licensed = request.POST.get('Company Licensed') == 'Yes'
+        print(company_insured,company_licensed)
         gst_number = request.POST.get('GST Number')
         products_services = request.POST.get('Products Services')
         company_website = request.POST.get('Company Website')
@@ -59,9 +60,11 @@ def contactus(request):
             country_code=country_code,
             phone_number=phone_number,
             email=email
+            
         )
         contact.save()
-        print(contact)
+        
+        
 
         # Return success response
         return JsonResponse({'success': True})
