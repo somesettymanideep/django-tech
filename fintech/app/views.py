@@ -2,14 +2,39 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from .models import Contact
+from .models import ContactSubmission
+
 
 # Create your views here.
 def index(request):
     return render(request, 'uifiles/index.html')
 
 
+@csrf_exempt
 def reachus(request):
-    return render(request, 'uifiles/reachus.html')
+    if request.method == 'POST':
+        full_name = request.POST.get('Full Name')
+        email_address = request.POST.get('Email Address')
+        phone_no = request.POST.get('Phone No')
+        message = request.POST.get('msg')
+
+        if full_name and email_address and phone_no and message:
+            # Save the submission to the database
+            submission = ContactSubmission(
+                full_name=full_name,
+                email_address=email_address,
+                phone_no=phone_no,
+                message=message
+            )
+            submission.save()
+
+            return JsonResponse({'success': True})
+        else:
+            return JsonResponse({'success': False, 'error': 'All fields are required.'})
+    elif request.method == 'GET':
+        return render(request, 'uifiles/reachus.html')
+    else:
+        return JsonResponse({'success': False, 'error': 'Invalid request method.'})
 
 
 

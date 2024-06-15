@@ -9,7 +9,7 @@
             <div class="col-lg-6">
                 <div class="bannr-text">
                     <h2>Contact Us</h2>
-                    <p>We create outstanding and world-class digital products, web design, apps, and branding.</p>
+                    <p>Let us simplify your financial management</p>
                     <!-- <ol class="breadcrumb">
                           <li class="breadcrumb-item">
                             <a href="index.html">Home</a>
@@ -91,9 +91,9 @@
         <div class="row pt-80 pl-80">
             <div class="col-lg-6">
                 <div class="heading two">
-                    <h6>MEET OUR PROFESSIONALS</h6>
-                    <h2>We'd Love to Hear From You!</h2>
-                    <p class="pt-lg-3 pt-md-2">If you need information or support, feel free to contact us</p>
+                    <h6>Get in Touch with SFI Fintech</h6>
+                    <h2>Your Financial Management Partner</h2>
+                    <p class="pt-lg-3 pt-md-2">Managing your finances can be complex, but reaching out for help shouldn’t be. At SFI Fintech, we’re here to support you every step of the way.</p>
                 </div>
                 <h6>Social Networking:</h6>
                 <ul class="social-icon">
@@ -103,12 +103,13 @@
                     </ul>
             </div>
             <div class="col-lg-6">
-                <form class="content-form" role="form" id="contact-form" method="post"> 
-                    <input type="text" name="Complete Name" placeholder="Complete Name" required="">
-                    <input type="text" name="Email Address" placeholder="Email Address" required="">
-                    <input type="text" name="Phone No" placeholder="Phone No" required="">
-                    <textarea placeholder="Your Message" name="msg"></textarea>
-                    <button type="submit" class="btn">Send Message</button>
+                <form class="content-form" action="#" id="reach-form" method="post"> 
+                    {% csrf_token %}
+                    <input type="text" name="Full Name" id="full_name" placeholder="Full Name" required="">
+                    <input type="text" name="Email Address" id="email_address" placeholder="Email Address" required="">
+                    <input type="text" name="Phone No" id="phone_no" placeholder="Phone No" required="">
+                    <textarea placeholder="Your Message" id="msg" name="msg"></textarea>
+                    <button type="submit" id="reach-btn" class="btn">Send Message</button>
                 </form>
             </div>
         </div>

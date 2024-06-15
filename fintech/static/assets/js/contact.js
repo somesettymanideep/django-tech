@@ -113,3 +113,42 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function() {
+    $('#reach-btn').click(function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        debugger
+        let fullName = $('input[name="Full Name"]').val();
+        let emailAddress = $('input[name="Email Address"]').val();
+        let phoneNo = $('input[name="Phone No"]').val();
+        let message = $('textarea[name="msg"]').val();
+        let csrfToken = $('[name=csrfmiddlewaretoken]').val(); 
+
+        let data = new FormData();
+        data.append('Full Name', fullName);
+        data.append('Email Address', emailAddress);
+        data.append('Phone No', phoneNo);
+        data.append('msg', message);
+        data.append('csrfmiddlewaretoken', csrfToken); // Append CSRF token
+
+        $.ajax({
+            type: 'POST',
+            url: '/reachus/',
+            processData: false,
+            contentType: false,
+            cache: false,
+            data: data,
+            success: function(response) {
+                if (response.success === true) {
+                    alert("Form Submission Successful");
+                    $('#reach-form')[0].reset();
+                } else {
+                    alert("Invalid Form Submission: " + response.error);
+                }
+            },
+            error: function(xhr) {
+                let errorMessage = xhr.status + ': ' + xhr.statusText;
+                alert("Form Submission Failed: " + errorMessage);
+            }
+        });
+    });
+});

@@ -23,3 +23,13 @@ class Contact(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.company_name}"
+
+
+class ContactSubmission(models.Model):
+    full_name = models.CharField(max_length=255)
+    email_address = models.EmailField()
+    phone_no = models.CharField(max_length=15)
+    message = models.TextField(max_length=650)
+
+    def __str__(self):
+        return f"{self.full_name} - {self.email_address}"
