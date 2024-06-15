@@ -3573,7 +3573,7 @@ form.content-form textarea::placeholder{
     content: "";
     width: 98%;
     height: 1000px;
-    background-color: #fff8e1;
+    background-color:#141A30;
     border-radius: 80px;
     z-index: -1;
     top: 12%;

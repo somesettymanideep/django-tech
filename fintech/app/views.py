@@ -8,6 +8,8 @@ def index(request):
     return render(request, 'uifiles/index.html')
 
 
+def reachus(request):
+    return render(request, 'uifiles/reachus.html')
 
 
 
