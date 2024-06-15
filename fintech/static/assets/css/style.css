@@ -3466,10 +3466,10 @@ ul.information-client li h4 {
     align-items: center;
     justify-content: center;
     height: 120px;
-    background: linear-gradient(90deg, #ef326f , #fe6c4e );
-    box-shadow: 0px 0px 13px 0px rgba(241,60,107,0.3);
-    -webkit-box-shadow: 0px 0px 13px 0px rgba(241,60,107,0.3);
-    -moz-box-shadow: 0px 0px 13px 0px rgba(241,60,107,0.3);
+    background: linear-gradient(90deg, #f6d200);
+    box-shadow: 0px 0px 13px 0px #f6d200;
+    -webkit-box-shadow: 0px 0px 13px 0px #f6d200;
+    -moz-box-shadow: 0px 0px 13px 0px #f6d200;
     padding: 30px;
     border-radius: 50%;
     position: relative;
